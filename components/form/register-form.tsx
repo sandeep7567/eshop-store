@@ -2,6 +2,7 @@ import { FC, FormEventHandler, useState } from "react";
 import { Input } from "../UI/input";
 import Button from "../UI/button";
 import axios from "axios";
+import { toast } from "sonner";
 
 interface RegisterFormProps {}
 
@@ -25,12 +26,12 @@ export const RegisterForm: FC<RegisterFormProps> = () => {
     }
 
     try {
-      const res = await axios.post(`${NEXT_PUBLIC_API_AUTH_URL}/register`, {
-        name,
-        email,
-        password,
-      });
-      console.log(res);
+      toast.message("service not availble right now!");
+      // const res = await axios.post(`${NEXT_PUBLIC_API_AUTH_URL}/register`, {
+      //   name,
+      //   email,
+      //   password,
+      // });
     } catch (error) {
       console.log(error);
     }

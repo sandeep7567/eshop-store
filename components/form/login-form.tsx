@@ -4,6 +4,7 @@ import Button from "../UI/button";
 import axios from "axios";
 import { UseAccountModal } from "@/hooks/use-account-modal";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 interface LoginFormProps {}
 
@@ -22,12 +23,14 @@ export const LoginForm: FC<LoginFormProps> = ({}) => {
     };
 
     try {
-      const {data} = await axios.post(`${NEXT_PUBLIC_API_AUTH_URL}/login`, { email, password });
-      if (data?.success) {
-        localStorage.setItem("user", JSON.stringify(data?.user));
-        onClose();
-        router.refresh();
-      }
+      
+      toast.message("service not availble right now!");
+      // const {data} = await axios.post(`${NEXT_PUBLIC_API_AUTH_URL}/login`, { email, password });
+      // if (data?.success) {
+      //   localStorage.setItem("user", JSON.stringify(data?.user));
+      //   onClose();
+      //   router.refresh();
+      // }
     } catch (error) {
       console.log(error);
     }
