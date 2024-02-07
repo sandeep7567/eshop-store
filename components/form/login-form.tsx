@@ -9,7 +9,7 @@ import { toast } from "sonner";
 interface LoginFormProps {}
 
 export const LoginForm: FC<LoginFormProps> = ({}) => {
-  const NEXT_PUBLIC_API_AUTH_URL = process.env.NEXT_PUBLIC_API_AUTH_URL
+  // const NEXT_PUBLIC_API_AUTH_URL = process.env.NEXT_PUBLIC_API_AUTH_URL
   const router = useRouter();
   const onClose = UseAccountModal((state) => state.onClose);
   const [email, setEmail] = useState("");

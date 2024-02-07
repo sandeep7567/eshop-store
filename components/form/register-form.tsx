@@ -7,7 +7,7 @@ import { toast } from "sonner";
 interface RegisterFormProps {}
 
 export const RegisterForm: FC<RegisterFormProps> = () => {
-  const NEXT_PUBLIC_API_AUTH_URL = process.env.NEXT_PUBLIC_API_AUTH_URL;
+  // const NEXT_PUBLIC_API_AUTH_URL = process.env.NEXT_PUBLIC_API_AUTH_URL;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
