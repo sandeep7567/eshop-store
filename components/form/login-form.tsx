@@ -16,7 +16,6 @@ export const LoginForm: FC<LoginFormProps> = ({}) => {
 
   const onSubmit:  FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    console.log({ email, password });
     if (!email || typeof email !== "string" || !password || typeof password !== "string") {
       return alert("required");
     };
